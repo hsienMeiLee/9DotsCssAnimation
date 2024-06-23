@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 dots</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="navigation">
+        <span style="--i:0;--x:0;--y:0"><i class='bx bxs-balloon'></i></span>
+        <span style="--i:1;--x:1;--y:0"><i class='bx bxs-shower' ></i></span>
+        <span style="--i:2;--x:-1;--y:0"><i class='bx bxl-graphql' ></i></span>
+        <span style="--i:3;--x:0;--y:1"><i class='bx bxs-castle' ></i></span>
+        <span style="--i:4;--x:0;--y:-1"><i class='bx bx-universal-access' ></i></span>
+        <span style="--i:5;--x:1;--y:1"><i class='bx bx-objects-vertical-center' ></i></span>
+        <span style="--i:6;--x:-1;--y:-1"><i class='bx bxl-xing' ></i></span>
+        <span style="--i:7;--x:1;--y:-1"><i class='bx bxl-deezer' ></i></span>
+        <span style="--i:8;--x:-1;--y:1"><i class='bx bx-cart-download' ></i></span>
+    </div>
+
+    <script>
+        let navigation = document.querySelector(".navigation");
+        navigation.onclick = function(){
+            navigation.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

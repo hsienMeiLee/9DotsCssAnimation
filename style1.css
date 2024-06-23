@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    background-color: #292e33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation{
+    width: 70px; height: 70px;
+    border-radius: 10px;
+    background-color: #596269;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.navigation.active{
+    width: 200px; height: 200px;
+}
+
+.navigation span{
+    width: 7px; height: 7px;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    border-radius: 50%;
+    transition: background-color 0.5s, transform 0.5s, height 0.5s, width 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.navigation.active span{
+    width: 45px; height: 45px;
+    transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+    background-color: #292e33;
+    color: white;
+}
+
+.navigation span .bx{
+    font-size: 0rem;
+}
+
+.navigation.active span .bx{
+    font-size: 1.5rem;
+    transition: 0.5s;
+    transition-delay: font-size 0.5s;
+}
+
+.navigation.active span:hover .bx{
+    color: greenyellow;
+    filter: drop-shadow(0 0 2px greenyellow) drop-shadow(0 0 5px greenyellow) drop-shadow(0 0 10px greenyellow);
+}
+

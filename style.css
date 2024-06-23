@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navigation{
+    position: relative;
+    width: 70px; height: 70px;
+    background: #495057;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    display: flex;
+    transition-delay: 0.8s;
+}
+
+.navigation.active{
+    width: 200px; height: 200px;
+    transition-delay: 0s;
+}
+
+.navigation span{
+    width: 7px; height: 7px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.1s;
+    transition-delay: calc(0.1s * var(--i));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation.active span{
+    transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+    width: 45px; height: 45px;
+    background-color: #303239;
+}
+
+.navigation span .bx{
+    font-size: 0rem;
+    transition: 0.5s;
+}
+
+.navigation.active span .bx{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.navigation.active span:hover .bx{
+    color: greenyellow;
+    filter: drop-shadow(0 0 2px greenyellow) drop-shadow(0 0 5px greenyellow) drop-shadow(0 0 15px greenyellow);
+}
